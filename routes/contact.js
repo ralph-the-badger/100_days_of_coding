@@ -1,11 +1,10 @@
+const path = require("path");
 const express = require("express");
 
 const router = express.Router();
 
 router.use("/contact", (req, res, next) => {
-  res.send(
-    '<form action="/new_contact" method="POST"><input type="text" name="message"><button type="submit">Send message</button></form>'
-  );
+  res.sendFile(path.join(__dirname, "../", "views", "contact.html"));
 });
 
 router.post("/new_contact", (req, res, next) => {
