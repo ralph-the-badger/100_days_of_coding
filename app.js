@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(contactRoute);
+app.use(contactRoute.myRouter);
 
 app.use(homeRoute);
 

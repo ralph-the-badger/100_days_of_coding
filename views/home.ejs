@@ -17,8 +17,10 @@
       </nav>
     </header>
     <main class="main-area">
-      <% if (lala) { %>
-        <h1>Hallo</h1>
+      <% if (perso.length > 0) { %>
+        <% perso.forEach(item => { %>
+          <h1>Hallo, <%= item.personName  %></h1>
+        <% }); %>  
       <% } else { %>     
         <h1>Nix da!</h1>
       <% }%>   

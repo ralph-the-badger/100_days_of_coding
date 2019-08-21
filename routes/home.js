@@ -7,13 +7,11 @@ const router = express.Router();
 
 router.get("/", (req, res, next) => {
   const myContactData = contactData.person;
-  const myBubu = contactData.bubu;
-  console.log(myContactData, myBubu);
+  console.log(myContactData);
   res.render("home", {
     pageTitle: "Startseite",
     PN: [0, 1, 2],
-    perso: myContactData,
-    lala: myBubu
+    perso: myContactData
   });
   // res.sendFile(path.join(__dirname, "../", "views", "home.html"));
 });

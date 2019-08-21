@@ -14,6 +14,9 @@ router.post("/new_contact", (req, res, next) => {
   res.redirect("/");
 });
 
-module.exports = router;
+// module.exports = router;
 // module.exports = person;
 // exports.bubu = "Bubu";
+
+exports.myRouter = router;
+exports.person = person;
