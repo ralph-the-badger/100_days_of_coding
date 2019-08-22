@@ -9,4 +9,4 @@ router.get("/addRecipe", (req, res, next) => {
   });
 });
 
-exports.addRecipeRouter = router;
+exports.addRecipeOfRouter = router;
