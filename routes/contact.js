@@ -5,8 +5,11 @@ const router = express.Router();
 
 const person = [];
 
-router.use("/contact", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../", "views", "contact.html"));
+router.get("/contact", (req, res, next) => {
+  res.render("contact", {
+    pageTitle: "Kontakt",
+    path: "/contact"
+  });
 });
 
 router.post("/new_contact", (req, res, next) => {
@@ -18,5 +21,5 @@ router.post("/new_contact", (req, res, next) => {
 // module.exports = person;
 // exports.bubu = "Bubu";
 
-exports.myRouter = router;
+exports.contactRouter = router;
 exports.person = person;

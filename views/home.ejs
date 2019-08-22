@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/style.css" />
+<%- include("./includes/head.ejs") %>
   </head>
   <body>
-    <header class="headArea">
-      <nav class="main-menu">
-        <ul class="menu">
-          <li class="active"><a href="/"><%= pageTitle %></a></li>
-          <li><a href="/contact">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include("./includes/navigation.ejs") %>
     <main class="main-area">
       <% if (perso.length > 0) { %>
         <% perso.forEach(item => { %>

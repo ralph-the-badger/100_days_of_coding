@@ -13,7 +13,7 @@ main {
 .menu {
   display: flex;
   height: 75px;
-  background-color: darkorchid;
+  background-color: #7d53df;
   align-items: center;
 }
 
@@ -24,9 +24,11 @@ li {
 
 a {
   color: #fff;
+  text-decoration: none;
 }
 
 a:hover,
-a:active {
+a.active {
   color: blanchedalmond;
+  text-decoration: none;
 }
