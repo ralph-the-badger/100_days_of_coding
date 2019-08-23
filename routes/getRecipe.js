@@ -2,10 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/getRecipe", (req, res, next) => {
+router.get("/rezept-suchen", (req, res, next) => {
   res.render("getRecipe", {
     pageTitle: "Rezept suchen",
-    path: "/getRecipe"
+    path: "/rezept-suchen"
   });
 });
 

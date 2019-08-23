@@ -5,14 +5,15 @@ const router = express.Router();
 
 const person = [];
 
-router.get("/contact", (req, res, next) => {
+router.get("/kontakt", (req, res, next) => {
+  // rendern der ejs
   res.render("contact", {
     pageTitle: "Kontakt",
-    path: "/contact"
+    path: "/kontakt"
   });
 });
 
-router.post("/new_contact", (req, res, next) => {
+router.post("/neuer_kontakt", (req, res, next) => {
   person.push({ personName: req.body.newName });
   res.redirect("/");
 });

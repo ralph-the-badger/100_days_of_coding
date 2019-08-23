@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const contactRoute = require("./routes/contact");
+const contactRoute = require("./routes/kontakt");
 const getRecipeRoute = require("./routes/getRecipe");
 const addRecipeRoute = require("./routes/addRecipe");
 const homeRoute = require("./routes/home");
