@@ -20,4 +20,4 @@ app.use(getRecipeRoute.getRecipeOfRouter);
 app.use(addRecipeRoute.addRecipeOfRouter);
 app.use(homeRoute);
 
-app.listen(8080);
+app.listen(80);
