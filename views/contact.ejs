@@ -1,9 +1,8 @@
 <%- include("./includes/head.ejs") %>
   </head>
   <body>
-    <%- include("./includes/navigation.ejs") %>
     <main class="main-area">
-      <h1>Kontaktseite</h1>
+      <%- include("./includes/navigation.ejs") %>
       <form action="/neuer_kontakt" method="POST">
         <label for="newName">Name</label>
         <input type="text" name="newName" id="newName"/>

@@ -1,10 +1,36 @@
-<header class="headArea">
-  <nav class="main-menu">
-    <ul class="menu">
-      <li><a class="<%= path === '/' ? 'active' : '' %>" href="/">Startseite</a></li>
-      <li><a class="<%= path === '/rezept-suchen' ? 'active' : '' %>" href="/rezept-suchen">Rezept suchen</a></li>
-      <li><a class="<%= path === '/rezept-anlegen' ? 'active' : '' %>" href="/rezept-anlegen">Rezept anlegen</a></li>      
-      <li><a class="<%= path === '/kontakt' ? 'active' : '' %>" href="/kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="container">
+  <div class="row">
+    <div class="main-heading d-flex mx-auto">
+      <h1><%= pageTitle %></h1>
+    </div>
+  </div>
+
+  <div class="headArea row">
+    <nav class="navbar d-flex mx-auto">
+      <ul class="d-flex justify-content-center">
+        <li>
+          <a class="<%= path === '/' ? 'active' : '' %>" href="/">Startseite</a>
+        </li>
+        <li>
+          <a
+            class="<%= path === '/rezept-suchen' ? 'active' : '' %>"
+            href="/rezept-suchen"
+            >Rezept suchen</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%= path === '/rezept-anlegen' ? 'active' : '' %>"
+            href="/rezept-anlegen"
+            >Rezept anlegen</a
+          >
+        </li>
+        <li>
+          <a class="<%= path === '/kontakt' ? 'active' : '' %>" href="/kontakt"
+            >Kontakt</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
