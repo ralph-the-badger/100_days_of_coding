@@ -1,12 +1,8 @@
 const express = require("express");
+const controllerRecipe = require("../controllers/recipe");
 
 const router = express.Router();
 
-router.get("/rezept-anlegen", (req, res, next) => {
-  res.render("addRecipe", {
-    pageTitle: "Rezept anlegen",
-    path: "/rezept-anlegen"
-  });
-});
+router.get("/rezept-anlegen", controllerRecipe.addRecipe);
 
 exports.addRecipeOfRouter = router;

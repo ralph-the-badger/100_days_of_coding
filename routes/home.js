@@ -1,17 +1,9 @@
-const path = require("path");
 const express = require("express");
 
-const contactData = require("./kontakt");
+const contactData = require("../controllers/newContact");
 
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  const myContactData = contactData.person;
-  res.render("home", {
-    pageTitle: "Startseite",
-    path: "/",
-    perso: myContactData
-  });
-});
+router.get("/", contactData.getContactForHome);
 
 module.exports = router;
