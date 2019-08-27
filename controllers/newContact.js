@@ -10,7 +10,7 @@ exports.getNewContact = (req, res, next) => {
 
 // store data in array "person" and redirect to "Startseite"
 exports.postNewContact = (req, res, next) => {
-  const contact = new Contact(req.body.newName);
+  const contact = new Contact(req.body.name);
   contact.save();
   res.redirect("/");
 };

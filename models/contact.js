@@ -17,6 +17,7 @@ module.exports = class Contact {
       let contacts = [];
       if (!err) {
         contacts = JSON.parse(fileContent);
+        // console.log(fileContent);
       }
       contacts.push(this);
       fs.writeFile(contactFilePath, JSON.stringify(contacts), err => {
