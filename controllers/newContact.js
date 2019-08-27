@@ -1,4 +1,4 @@
-const person = [];
+const Contact = require("../models/contact");
 
 // render page "Kontakt" with data for contact.ejs
 exports.getNewContact = (req, res, next) => {
@@ -10,15 +10,18 @@ exports.getNewContact = (req, res, next) => {
 
 // store data in array "person" and redirect to "Startseite"
 exports.postNewContact = (req, res, next) => {
-  person.push({ personName: req.body.newName });
+  const contact = new Contact(req.body.newName);
+  contact.save();
   res.redirect("/");
 };
 
 // render page "Startseite" and pass data from array "person" for home.ejs
 exports.getContactForHome = (req, res, next) => {
-  res.render("home", {
-    pageTitle: "Startseite",
-    path: "/",
-    perso: person
+  Contact.fetchAll(contacts => {
+    res.render("home", {
+      pageTitle: "Startseite",
+      path: "/",
+      perso: contacts
+    });
   });
 };
