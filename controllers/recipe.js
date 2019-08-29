@@ -1,3 +1,5 @@
+const Recipe = require("../models/recipe");
+
 exports.getRecipe = (req, res, next) => {
   res.render("getRecipe", {
     pageTitle: "Rezept suchen",
@@ -5,9 +7,18 @@ exports.getRecipe = (req, res, next) => {
   });
 };
 
+exports.postRecipe = (req, res, next) => {
+  const recipe = new Recipe(req.body.rezeptName);
+  recipe.save();
+  res.redirect("../rezept-anlegen");
+};
+
 exports.addRecipe = (req, res, next) => {
-  res.render("addRecipe", {
-    pageTitle: "Rezept anlegen",
-    path: "/rezept-anlegen"
+  Recipe.fetchAll(recipes => {
+    res.render("addRecipe", {
+      pageTitle: "Rezept anlegen",
+      path: "/rezept-anlegen",
+      rec: recipes
+    });
   });
 };

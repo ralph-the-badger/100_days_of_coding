@@ -3,6 +3,13 @@
   <body>
     <main class="main-area">
       <%- include("./includes/navigation.ejs") %>
+        <% if (rec.length > 0) { %>
+          <% rec.forEach(el => { %>
+            <h2><%= el.recipeName %></h2>
+          <% }); %>
+        <% } else { %> 
+          <h2>Rezepteliste</h2> 
+        <% } %>  
     </main>
   </body>
 </html>
