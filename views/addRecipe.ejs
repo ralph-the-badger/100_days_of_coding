@@ -1,15 +1,17 @@
 <%- include("./includes/head.ejs") %>
-  </head>
-  <body>
-    <main class="main-area">
-      <%- include("./includes/navigation.ejs") %>
-        <% if (rec.length > 0) { %>
-          <% rec.forEach(el => { %>
-            <h2><%= el.recipeName %></h2>
-          <% }); %>
-        <% } else { %> 
-          <h2>Rezepteliste</h2> 
-        <% } %>  
-    </main>
-  </body>
+</head>
+
+<body>
+  <main class="main-area">
+    <%- include("./includes/navigation.ejs") %>
+    <div class="container">
+      <form action="/neues_rezept" method="post">
+        <label for="rezeptName">Rezeptnamen eingeben</label>
+        <input type="text" name="rezeptName" id="rezeptName">
+        <button type="submit">Rezept suchen</button>
+      </form>
+    </div>
+  </main>
+</body>
+
 </html>

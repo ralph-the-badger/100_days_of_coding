@@ -12,6 +12,11 @@
           <a class="<%= path === '/' ? 'active' : '' %>" href="/">Startseite</a>
         </li>
         <li>
+          <a class="<%= path === '/rezepte' ? 'active' : '' %>" href="/rezepte"
+            >Rezepte</a
+          >
+        </li>
+        <li>
           <a
             class="<%= path === '/rezept-suchen' ? 'active' : '' %>"
             href="/rezept-suchen"
@@ -23,6 +28,13 @@
             class="<%= path === '/rezept-anlegen' ? 'active' : '' %>"
             href="/rezept-anlegen"
             >Rezept anlegen</a
+          >
+        </li>
+        <li>
+          <a
+            class="<%= path === '/rezept-bearbeiten' ? 'active' : '' %>"
+            href="/rezept-bearbeiten"
+            >Rezept bearbeiten</a
           >
         </li>
         <li>
