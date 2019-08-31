@@ -10,4 +10,10 @@ router.post("/neues_rezept", adminController.postAddRecipe);
 
 router.get("/rezepte", adminController.displayNewRecipe);
 
+router.get("/kontakt", adminController.getNewContact);
+
+router.post("/neuer_kontakt", adminController.postNewContact);
+
+router.get("/", adminController.getContactForHome);
+
 module.exports = router;

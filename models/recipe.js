@@ -18,8 +18,18 @@ const getRecipeFromFile = cb => {
 };
 
 module.exports = class Recipe {
-  constructor(recipeName) {
+  constructor(
+    recipeName,
+    recipeImage,
+    recipeIngredients,
+    recipeDescription,
+    recipeInfo
+  ) {
     this.recipeName = recipeName;
+    this.recipeImage = recipeImage;
+    this.recipeIngredients = recipeIngredients;
+    this.recipeDescription = recipeDescription;
+    this.recipeInfo = recipeInfo;
   }
   save() {
     getRecipeFromFile(recipes => {

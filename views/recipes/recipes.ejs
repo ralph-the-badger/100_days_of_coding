@@ -7,6 +7,10 @@
     <% if (rec.length > 0) { %>
     <% rec.forEach(item => { %>
     <h2><%= item.recipeName  %></h2>
+    <h3><%= item.recipeImage  %></h3>
+    <h3><%= item.recipeIngredients  %></h3>
+    <h3><%= item.recipeDescription  %></h3>
+    <h3><%= item.recipeInfo  %></h3>
     <% }); %>
     <% } else { %>
     <h2>Familienrezepte</h2>
