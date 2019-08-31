@@ -1,4 +1,4 @@
-const Recipe = require("../models/recipe");
+// const Recipe = require("../models/recipe");
 
 // exports.getRecipe = (req, res, next) => {
 //   res.render("getRecipe", {
@@ -23,26 +23,27 @@ const Recipe = require("../models/recipe");
 //   });
 // };
 
-exports.getRecipes = (req, res, next) => {
-  res.render("addRecipe", {
-    pageTitle: "Rezept hinzufügen",
-    path: "/rezept-anlegen"
-  });
-};
+// exports.getNewRecipe = (req, res, next) => {
+//   res.render("/views/addRecipe.ejs", {
+//     pageTitle: "Rezept anlegen",
+//     path: "/rezept-anlegen"
+//   });
+// };
 
-// Rezepte anlegen und anzeigen
-exports.postRecipes = (req, res, next) => {
-  const recipe = new Recipe(req.body.rezeptName);
-  recipe.save();
-  res.redirect("../rezepte");
-};
+// // store data in array "person" and redirect to "Startseite"
+// exports.postNewRecipe = (req, res, next) => {
+//   const contact = new Recipe(req.body.rezeptName);
+//   contact.save();
+//   res.redirect("/rezepte");
+// };
 
-exports.addRecipes = (req, res, next) => {
-  Recipe.fetchAll(recipes => {
-    res.render("recipes", {
-      pageTitle: "Rezepte",
-      path: "/rezepte",
-      rec: recipes
-    });
-  });
-};
+// // render page "Startseite" and pass data from array "person" for home.ejs
+// exports.getRecipeForRezepte = (req, res, next) => {
+//   Contact.fetchAll(recipes => {
+//     res.render("/views/recipes.ejs", {
+//       pageTitle: "Rezepte",
+//       path: "/",
+//       rec: recipes
+//     });
+//   });
+// };

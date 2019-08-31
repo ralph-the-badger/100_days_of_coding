@@ -1,10 +1,13 @@
 const express = require("express");
 
-const controllerRecipe = require("../controllers/recipe");
+const recipeRoute = require("../controllers/recipes");
 
 const router = express.Router();
 
-// define route of "Rezept suchen" and get data from recipe controller
-router.get("/rezept-anlegen", controllerRecipe.getRecipes);
+router.get("/", recipeRoute.getIndex);
 
-exports.getRecipeOfRouter = router;
+router.get("/products");
+
+router.get("/kontakt");
+
+module.exports = router;

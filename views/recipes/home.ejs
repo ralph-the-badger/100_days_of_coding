@@ -1,0 +1,17 @@
+<%- include("../includes/head.ejs") %>
+</head>
+
+<body>
+  <main class="main-area">
+    <%- include("../includes/navigation.ejs") %>
+    <% if (rec.length > 0) { %>
+    <% rec.forEach(item => { %>
+    <h2><%= item.recipeName  %></h2>
+    <% }); %>
+    <% } else { %>
+    <h2>Familienrezepte</h2>
+    <% } %>
+  </main>
+</body>
+
+</html>
