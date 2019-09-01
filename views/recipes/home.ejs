@@ -1,15 +1,28 @@
-<%- include("../includes/head.ejs") %>
-</head>
+  <%- include("../includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/recipe-details.css" />
+  </head>
 
-<body>
-  <main class="main-area">
-    <%- include("../includes/navigation.ejs") %>
-    <% if (perso.length > 0) { %>
-    <% perso.forEach(item => { %>
-    <h2><%= item.name  %></h2>
-    <% }); %>
-    <% } else { %>
-    <h2>Familienrezepte</h2>
-    <% } %>
-  </main>
-</body>
+  <body>
+    <div class="container main-area">
+      <div class="row">
+        <%- include("../includes/h1-heading.ejs") %>
+      </div>
+
+      <div class="headArea row">
+        <%- include("../includes/navigation.ejs") %>
+      </div>
+
+      <div class="row">
+        <div class="contact-phrase">
+          <% if (perso.length > 0) { %>
+            <% perso.forEach(item => { %>
+              <h2>Willkommen <%= item.name  %>!</h2>
+            <% }); %>
+          <% } else { %>
+            <h2>Willkommen!</h2>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>  
