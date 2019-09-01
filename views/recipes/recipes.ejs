@@ -1,21 +1,34 @@
-<%- include("../includes/head.ejs") %>
-</head>
+  <%- include("../includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/recipe-details.css" />
+  </head>
 
-<body>
-  <main class="main-area">
-    <%- include("../includes/navigation.ejs") %>
-    <% if (rec.length > 0) { %>
-    <% rec.forEach(item => { %>
-    <h2><%= item.recipeName  %></h2>
-    <h3><%= item.recipeImage  %></h3>
-    <h3><%= item.recipeIngredients  %></h3>
-    <h3><%= item.recipeDescription  %></h3>
-    <h3><%= item.recipeInfo  %></h3>
-    <% }); %>
-    <% } else { %>
-    <h2>Familienrezepte</h2>
-    <% } %>
-  </main>
-</body>
+  <body>
+    <div class="container main-area">
+      <div class="row">
+        <%- include("../includes/h1-heading.ejs") %>
+      </div>
 
-</html>
+      <div class="headArea row">
+        <%- include("../includes/navigation.ejs") %>
+      </div>
+
+      <div class="row">
+        <% if (rec.length > 0) { %>
+          <% rec.forEach(item => { %>
+            <div class="recipe-item col-4">
+              <h2><%= item.recipeName  %></h2>
+              <div class="recipe-image">
+                <a href="/rezepte/<%= item.id %>"><img src="<%= item.recipeImage %>" alt="<%= item.recipeName %>"></a>
+              </div>
+              <div class="detail-link">
+                <a href="/rezepte/<%= item.id %>">Details</a>
+              </div>
+            </div>  
+          <% }); %>
+        <% } else { %>
+          <h2>Familienrezepte</h2>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>  

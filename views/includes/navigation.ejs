@@ -1,41 +1,31 @@
-<div class="container">
-  <div class="row">
-    <div class="main-heading d-flex mx-auto">
-      <h1><%= pageTitle %></h1>
-    </div>
-  </div>
-
-  <div class="headArea row">
-    <nav class="navbar d-flex mx-auto">
-      <ul class="d-flex justify-content-center">
-        <li>
-          <a class="<%= path === '/' ? 'active' : '' %>" href="/">Startseite</a>
-        </li>
-        <li>
-          <a class="<%= path === '/rezepte' ? 'active' : '' %>" href="/rezepte"
-            >Rezepte</a
-          >
-        </li>
-        <li>
-          <a
-            class="<%= path === '/rezept-anlegen' ? 'active' : '' %>"
-            href="/rezept-anlegen"
-            >Rezept hinzufügen</a
-          >
-        </li>
-        <li>
-          <a
-            class="<%= path === '/rezept-bearbeiten' ? 'active' : '' %>"
-            href="/rezept-bearbeiten"
-            >Rezept bearbeiten</a
-          >
-        </li>
-        <li>
-          <a class="<%= path === '/kontakt' ? 'active' : '' %>" href="/kontakt"
-            >Kontakt</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+<nav class="navbar d-flex mx-auto">
+  <ul class="d-flex justify-content-center">
+    <li>
+      <a class="<%= path === '/' ? 'active' : '' %>" href="/">Startseite</a>
+    </li>
+    <li>
+      <a class="<%= path === '/rezepte' ? 'active' : '' %>" href="/rezepte"
+        >Rezepte</a
+      >
+    </li>
+    <li>
+      <a
+        class="<%= path === '/rezept-anlegen' ? 'active' : '' %>"
+        href="/rezept-anlegen"
+        >Rezept hinzufügen</a
+      >
+    </li>
+    <li>
+      <a
+        class="<%= path === '/rezept-bearbeiten' ? 'active' : '' %>"
+        href="/rezept-bearbeiten"
+        >Rezept bearbeiten</a
+      >
+    </li>
+    <li>
+      <a class="<%= path === '/kontakt' ? 'active' : '' %>" href="/kontakt"
+        >Kontakt</a
+      >
+    </li>
+  </ul>
+</nav>

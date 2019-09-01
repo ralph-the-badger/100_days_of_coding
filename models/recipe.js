@@ -32,6 +32,7 @@ module.exports = class Recipe {
     this.recipeInfo = recipeInfo;
   }
   save() {
+    this.id = Math.floor(Math.random() * 100).toString();
     getRecipeFromFile(recipes => {
       recipes.push(this);
       fs.writeFile(recipeFilePath, JSON.stringify(recipes), err => {
@@ -41,5 +42,11 @@ module.exports = class Recipe {
   }
   static fetchAll(cb) {
     getRecipeFromFile(cb);
+  }
+  static findRecipeById(id, cb) {
+    getRecipeFromFile(recipes => {
+      const recipe = recipes.find(r => r.id === id);
+      cb(recipe);
+    });
   }
 };

@@ -12,9 +12,13 @@ h1 {
   transform: rotate(-5deg);
   text-align: center;
   text-shadow: 3px 3px #558abb;
-  padding-top: 50px;
+  padding-top: 75px;
 }
 /*  Menu */
+
+ul {
+  padding: 0;
+}
 
 li {
   padding: 50px;
@@ -32,40 +36,40 @@ a.active {
   text-decoration: none;
 }
 
-/* nav.main-menu {
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-
-ul.menu {
-  display: flex;
-  height: 150px;
-  align-items: center;
-  text-align: center;
-}
-
-li {
-  display: inline;
-  list-style-type: none;
-  padding: 25px;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-  color: #798fdb;
-}
-
-a:hover,
-a.active {
-  color: blanchedalmond;
-  text-decoration: none;
-} */
-
-main.main-area {
+.main-area {
   width: 80%;
-  height: 500px;
+  height: 100%;
   margin: 1% auto;
   background-color: #ffffff;
+}
+
+.row {
+  margin: 2% 5%;
+}
+
+/* Formulare */
+.form-control {
+  border: none;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: #798fdb;
 }

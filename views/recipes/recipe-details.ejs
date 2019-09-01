@@ -1,0 +1,45 @@
+  <%- include("../includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/recipe-details.css" />
+  </head>
+
+  <body>
+    <div class="container main-area">
+      <div class="row">
+        <%- include("../includes/h1-heading.ejs") %>
+      </div>
+
+      <div class="headArea row">
+        <%- include("../includes/navigation.ejs") %>
+      </div>
+
+      <div class="row">
+        <div class="detailed-recipe-image col-12">
+          <img src="<%= recipe.recipeImage %>" alt="<%= recipe.recipeName %>">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>Zutatenliste</h2>
+          <p><%= recipe.recipeIngredients %></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>Beschreibung</h2>
+          <p><%= recipe.recipeDescription %></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>weitere informationen</h2>
+          <p><%= recipe.recipeInfo  %></p>
+        </div>
+      </div>
+
+    </div> <!-- end container -->
+
+  </body>
+</html>  

@@ -1,0 +1,11 @@
+.detailed-recipe-image {
+  display: flex;
+}
+.detailed-recipe-image img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.recipe-image img {
+  width: 100%;
+}

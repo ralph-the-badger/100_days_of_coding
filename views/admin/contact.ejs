@@ -1,14 +1,27 @@
-<%- include("../includes/head.ejs") %>
+  <%- include("../includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/recipe-details.css" />
   </head>
-  <body>
-    <main class="main-area">
-      <%- include("../includes/navigation.ejs") %>
-      <form action="/neuer_kontakt" method="POST">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name"/>
 
-        <button type="submit">Namen senden</button>
-      </form>
-    </main>
+  <body>
+    <div class="container main-area">
+      <div class="row">
+        <%- include("../includes/h1-heading.ejs") %>
+      </div>
+
+      <div class="headArea row">
+        <%- include("../includes/navigation.ejs") %>
+      </div>
+
+      <div class="row">
+        <div class="contact-form col-12">
+          <form action="/neuer_kontakt" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />        
+            <button type="submit">Namen senden</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
+
 </html>

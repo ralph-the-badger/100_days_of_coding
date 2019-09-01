@@ -1,35 +1,44 @@
-<%- include("../includes/head.ejs") %>
-</head>
+  <%- include("../includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/recipe-details.css" />
+  </head>
 
-<body>
-  <main class="main-area">
-    <%- include("../includes/navigation.ejs") %>
-    <div class="container recipe-form">
-      <form action="/neues_rezept" method="post">
-        <div class="recipe-form-entry-recName">
-          <label for="rezeptName">Rezeptname</label>
-          <input type="text" name="rezeptName" id="rezeptName">
+  <body>
+    <div class="container main-area">
+      <div class="row">
+        <%- include("../includes/h1-heading.ejs") %>
+      </div>
+
+      <div class="headArea row">
+        <%- include("../includes/navigation.ejs") %>
+      </div>
+
+      <div class="row">
+        <div class="recipe-form col-12">
+          <form action="/neues_rezept" method="post">
+            <div class="form-control recipe-form-entry-recName">
+              <label for="rezeptName">Rezeptname</label>
+              <input type="text" name="rezeptName" id="rezeptName">
+            </div>
+            <div class="form-control recipe-form-entry-recImg">
+              <label for="rezeptBild">Rezeptbild</label>
+              <input type="text" name="rezeptBild" id="rezeptBild">
+            </div>
+            <div class="form-control recipe-form-entry-recIng">
+              <label for="rezeptZutaten">Zutatenliste</label>
+              <textarea name="rezeptZutaten" id="rezeptZutaten"></textarea>
+            </div>
+            <div class="form-control recipe-form-entry-recDesc">
+              <label for="rezeptAnleitung">Anleitung</label>
+              <textarea name="rezeptAnleitung" id="rezeptAnleitung"></textarea>
+            </div>
+            <div class="form-control recipe-form-entry-recInfo">
+              <label for="rezeptInfo">weitere Informationen</label>
+              <textarea name="rezeptInfo" id="rezeptInfo"></textarea>
+            </div>
+            <button type="submit">Rezept hinzufügen</button>
+          </form>
         </div>
-        <div class="recipe-form-entry-recImg">
-          <label for="rezeptBild">Rezeptbild</label>
-          <input type="text" name="rezeptBild" id="rezeptBild">
-        </div>
-        <div class="recipe-form-entry-recIng">
-          <label for="rezeptZutaten">Zutatenliste</label>
-          <textarea name="rezeptZutaten" id="rezeptZutaten"></textarea>
-        </div>
-        <div class="recipe-form-entry-recDesc">
-          <label for="rezeptAnleitung">Anleitung</label>
-          <textarea name="rezeptAnleitung" id="rezeptAnleitung"></textarea>
-        </div>
-        <div class="recipe-form-entry-recInfo">
-          <label for="rezeptInfo">weitere Informationen</label>
-          <textarea name="rezeptInfo" id="rezeptInfo"></textarea>
-        </div>
-      <button type="submit">Rezept hinzufügen</button>
-      </form>
+      </div>
     </div>
-  </main>
-</body>
-
+  </body>
 </html>
