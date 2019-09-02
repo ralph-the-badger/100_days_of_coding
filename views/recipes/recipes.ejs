@@ -20,8 +20,8 @@
               <div class="recipe-image">
                 <a href="/rezepte/<%= item.id %>"><img src="<%= item.recipeImage %>" alt="<%= item.recipeName %>"></a>
               </div>
-              <div class="detail-link">
-                <a href="/rezepte/<%= item.id %>">Details</a>
+              <div class="detail-button">
+                <a class="btn" href="/rezepte/<%= item.id %>">Details</a>
               </div>
             </div>  
           <% }); %>

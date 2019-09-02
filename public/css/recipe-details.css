@@ -9,3 +9,12 @@
 .recipe-image img {
   width: 100%;
 }
+
+.detail-button {
+  margin: 5%;
+  text-align: center;
+}
+
+.detail-button .btn {
+  background-color: #6051c5;
+}
