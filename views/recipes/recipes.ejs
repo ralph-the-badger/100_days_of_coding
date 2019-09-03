@@ -12,16 +12,18 @@
         <%- include("../includes/navigation.ejs") %>
       </div>
 
-      <div class="row">
+      <div class="row mx-md-4">
         <% if (rec.length > 0) { %>
           <% rec.forEach(item => { %>
-            <div class="recipe-item col-4">
-              <h2><%= item.recipeName  %></h2>
-              <div class="recipe-image">
-                <a href="/rezepte/<%= item.id %>"><img src="<%= item.recipeImage %>" alt="<%= item.recipeName %>"></a>
-              </div>
-              <div class="detail-button">
-                <a class="btn" href="/rezepte/<%= item.id %>">Details</a>
+            <div class="recipe-item align-items-center col mx-md-2 my-md-4">
+              <div class="p-1 my-2">
+                <h2><%= item.recipeName  %></h2>
+                <div class="recipe-image">
+                  <a href="/rezepte/<%= item.id %>"><img src="<%= item.recipeImage %>" alt="<%= item.recipeName %>"></a>
+                </div>
+                <div class="detail-button">
+                  <a class="btn" href="/rezepte/<%= item.id %>">Details</a>
+                </div>
               </div>
             </div>  
           <% }); %>
