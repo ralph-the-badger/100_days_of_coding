@@ -1,13 +1,27 @@
+#recipe-detailed .main-content {
+  margin: 0 auto;
+  width: 75%;
+}
+
 .detailed-recipe-image {
   display: flex;
 }
 .detailed-recipe-image img {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .recipe-image img {
   width: 100%;
+}
+
+.recipe-instructions {
+  margin: 5% 0;
+}
+
+.recipe-instructions h2 {
+  text-align: left;
+  padding: 10px 0px;
 }
 
 .detail-button {
