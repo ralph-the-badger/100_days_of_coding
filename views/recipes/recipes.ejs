@@ -1,5 +1,6 @@
   <%- include("../includes/head.ejs") %>
   <link rel="stylesheet" href="/css/recipe-details.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
   </head>
 
   <body>
@@ -15,7 +16,7 @@
       <div class="row row-eq-height">
         <% if (rec.length > 0) { %>
           <% rec.forEach(item => { %>
-            <div class="recipe-item align-items-center col-4">
+            <div class="recipe-item align-items-center col-12 col-lg-4 col-md-6">
               <div class="recipe-item-inner">
                 <h2><%= item.recipeName  %></h2>
                 <div class="recipe-image">
