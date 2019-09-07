@@ -1,37 +1,39 @@
 <nav class="navbar mx-auto">
-  <ul class="nav justify-content-end col-12">
-    <li class="nav-item">
-      <a class="nav-link <%= path === '/' ? 'active' : '' %>" href="/"
-        >Startseite</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link <%= path === '/rezepte' ? 'active' : '' %>"
-        href="/rezepte"
-        >Rezepte</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link <%= path === '/rezept-anlegen' ? 'active' : '' %>"
-        href="/rezept-anlegen"
-        >Rezept hinzufügen</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link <%= path === '/rezept-bearbeiten' ? 'active' : '' %>"
-        href="/rezept-bearbeiten"
-        >Rezept bearbeiten</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link <%= path === '/kontakt' ? 'active' : '' %>"
-        href="/kontakt"
-        >Kontakt</a
-      >
-    </li>
-  </ul>
+  <div class="main-menu">
+    <ul class="nav justify-content-end col-12">
+      <li class="nav-item">
+        <a class="nav-link <%= path === '/' ? 'active' : '' %>" href="/"
+          >Startseite</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link <%= path === '/rezepte' ? 'active' : '' %>"
+          href="/rezepte"
+          >Rezepte</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link <%= path === '/rezept-anlegen' ? 'active' : '' %>"
+          href="/rezept-anlegen"
+          >Rezept hinzufügen</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link <%= path === '/rezept-bearbeiten' ? 'active' : '' %>"
+          href="/rezept-bearbeiten"
+          >Rezept bearbeiten</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link <%= path === '/kontakt' ? 'active' : '' %>"
+          href="/kontakt"
+          >Kontakt</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>
