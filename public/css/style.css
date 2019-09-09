@@ -82,12 +82,3 @@ a.active {
 .form-control textarea:focus {
   outline-color: #798fdb;
 }
-
-/* Recipe Tiles */
-.recipe-item-inner {
-  margin: 10px;
-  padding: 20px;
-  border: 2px solid rgba(188, 63, 131, 0.5);
-  border-radius: 20px;
-  background-color: rgba(188, 63, 131, 0.2);
-}

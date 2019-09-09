@@ -3,6 +3,33 @@
   width: 75%;
 }
 
+/* Tiles in Overview should all have eual heights */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-eq-height > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-eq-height > .recipe-item > .recipe-item-inner {
+  height: 100%;
+}
+
+/* Recipe Tiles */
+.recipe-item-inner {
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid rgba(188, 63, 131, 0.5);
+  border-radius: 20px;
+  background-color: rgba(188, 63, 131, 0.2);
+}
+
 .detailed-recipe-image {
   display: flex;
 }
