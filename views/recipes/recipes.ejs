@@ -22,8 +22,9 @@
                 <div class="recipe-image">
                   <a href="/rezepte/<%= item.id %>"><img src="<%= item.recipeImage %>" alt="<%= item.recipeName %>"></a>
                 </div>
-                <div class="detail-button">
-                  <a class="btn" href="/rezepte/<%= item.id %>">Details</a>
+                <div class="buttons">
+                  <a class="btn detail-button" href="/rezepte/<%= item.id %>">Details</a>
+                  <a class="btn edit-button" href="/rezept-bearbeiten/<%= item.id %>">Rezept bearbeiten</a>
                 </div>
               </div>
             </div> 

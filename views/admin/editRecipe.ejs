@@ -1,0 +1,48 @@
+<%- include("../includes/head.ejs") %>
+<link rel="stylesheet" href="/css/recipe-details.css" />
+<link rel="stylesheet" href="/css/add-edit-recipe.css" />
+</head>
+
+<body>
+  <div class="container main-area">
+    <div class="row">
+      <%- include("../includes/h1-heading.ejs") %>
+    </div>
+
+    <div class="headArea row">
+      <%- include("../includes/navigation.ejs") %>
+    </div>
+
+    <div class="row">
+      <div class="recipe-form col-12">
+        <form action="/neues_rezept" method="post">
+          <div class="form-control recipe-form-entry-recName">
+            <label for="rezeptName">Rezeptname</label>
+            <input type="text" name="rezeptName" id="rezeptName" value="<%= recipe.recipeName %>">
+          </div>
+          <div class="form-control recipe-form-entry-recImg">
+            <label for="rezeptBild">Rezeptbild</label>
+            <input type="text" name="rezeptBild" id="rezeptBild" value="<%= recipe.recipeImage %>">
+          </div>
+          <div class="form-control recipe-form-entry-recIng">
+            <label for="rezeptZutaten">Zutatenliste</label>
+            <textarea name="rezeptZutaten" id="rezeptZutaten"><%= recipe.recipeIngredients %></textarea>
+          </div>
+          <div class="form-control recipe-form-entry-recDesc">
+            <label for="rezeptAnleitung">Anleitung</label>
+            <textarea name="rezeptAnleitung" id="rezeptAnleitung"><%= recipe.recipeDescription %></textarea>
+          </div>
+          <div class="form-control recipe-form-entry-recInfo">
+            <label for="rezeptInfo">weitere Informationen</label>
+            <textarea name="rezeptInfo" id="rezeptInfo"><%= recipe.recipeInfo %></textarea>
+          </div>
+          <div class="edit-recipe-button">
+            <button class="btn" type="submit">Rezept speichern</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

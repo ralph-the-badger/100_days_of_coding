@@ -25,6 +25,17 @@ exports.postAddRecipe = (req, res, next) => {
   res.redirect("/rezepte");
 };
 
+exports.getEditRecipe = (req, res, next) => {
+  const recId = req.params.rezeptId;
+  Recipe.findRecipeById(recId, recipe => {
+    res.render("../views/admin/editRecipe.ejs", {
+      pageTitle: "Rezept bearbeiten",
+      path: "/rezept-bearbeiten",
+      recipe: recipe
+    });
+  });
+};
+
 exports.displayNewRecipe = (req, res, next) => {
   Recipe.fetchAll(recipes => {
     res.render("../views/recipes/recipes.ejs", {
