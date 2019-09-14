@@ -49,4 +49,17 @@ module.exports = class Recipe {
       cb(recipe);
     });
   }
+  static deleteRecipeById(id) {
+    getRecipeFromFile(recipes => {
+      const recipe = recipes.find(rec => rec.id === id);
+      const updatedRecipes = recipes.filter(rec => rec.id !== id);
+      fs.writeFile(recipeFilePath, JSON.stringify(updatedRecipes), err => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(recipe.id);
+        }
+      });
+    });
+  }
 };

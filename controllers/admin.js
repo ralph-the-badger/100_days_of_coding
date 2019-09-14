@@ -46,6 +46,12 @@ exports.displayNewRecipe = (req, res, next) => {
   });
 };
 
+exports.postDeleteRecipe = (req, res, next) => {
+  const recipeId = req.body.rezeptId;
+  Recipe.deleteRecipeById(recipeId);
+  res.redirect("/rezepte");
+};
+
 // render page "Kontakt" with data for contact.ejs
 exports.getNewContact = (req, res, next) => {
   res.render("../views/admin/contact.ejs", {

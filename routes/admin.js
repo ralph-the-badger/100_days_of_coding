@@ -15,6 +15,8 @@ router.get("/rezepte/:rezeptId", recipeController.getRecipeDetails);
 
 router.get("/rezept-bearbeiten/:rezeptId", adminController.getEditRecipe);
 
+router.post("/rezept-entfernen", adminController.postDeleteRecipe);
+
 router.get("/kontakt", adminController.getNewContact);
 
 router.post("/neuer_kontakt", adminController.postNewContact);
