@@ -16,7 +16,11 @@
       <div class="row row-eq-height">
         <% if (rec.length > 0) { %>
           <% rec.forEach(item => { %>
-            <div class="recipe-item align-items-center col-12 col-lg-4 col-md-6">
+            <% if(rec.length == 2) { %>
+              <div class="recipe-item align-items-center col-12 col-lg-6 col-md-6">
+            <% } else { %>
+              <div class="recipe-item align-items-center col-12 col-lg-4 col-md-6">
+            <% } %>
               <div class="recipe-item-inner">
                 <h2><%= item.recipeName  %></h2>
                 <div class="recipe-image">
@@ -25,13 +29,13 @@
                 <div class="buttons">
                   <a class="btn detail-button" href="/rezepte/<%= item.id %>">Details</a>
                   <a class="btn edit-button" href="/rezept-bearbeiten/<%= item.id %>">Rezept bearbeiten</a>
-                  <form action="/rezept-entfernen/" method="post">
+                  <form action="/rezept-entfernen/" method="post" class="d-flex">
                     <input type="hidden" value="<%= item.id %>" name="rezeptId">
-                    <button class="btn" type="submit">Rezept entfernen</button>
+                    <button class="btn m-auto" type="submit">Rezept entfernen</button>
                   </form>
                 </div>
               </div>
-            </div> 
+            </div>
           <% }); %>
         <% } else { %>
           <h2>Familienrezepte</h2>
